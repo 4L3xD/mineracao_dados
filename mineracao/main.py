@@ -18,7 +18,6 @@ for i in padaria.index:
         print(consumo)
 
 print('Produtos consumidos: {}'.format(produto))
-
     
 
 # Análise por linha (quais produtos cada i consumiu)
