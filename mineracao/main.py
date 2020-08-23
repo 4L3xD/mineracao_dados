@@ -5,20 +5,14 @@ padaria = pd.read_excel('pao-pra-ja.xlsx')
 print(padaria)
 
 produtos = ['Leite', 'Café',  'Pão', 'Mortadela', 'Suco', 'Manteiga']
-venda = ['']
-cliente = []
 
 print('\n')
 for i in padaria.index:
-  consumo = ['']
+  consumo = []
   for produto in produtos:
       if padaria[produto][i] == 'sim':
-        consumo.append([[padaria['N'][i]], [produto]]) 
-        print('Nº do consumidor de {}:  {}'.format(produto, padaria['N'][i]))
-        print(consumo)
-
-print('Produtos consumidos: {}'.format(produto))
-    
+        consumo.append(produto) 
+  print('Consumidor: {} → Produtos: {}.'.format(padaria['N'][i], consumo))
 
 # Análise por linha (quais produtos cada i consumiu)
 # Análise por coluna (quantos is consumiram determinado produto)
