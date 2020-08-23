@@ -14,5 +14,9 @@ for i in padaria.index:
         consumo.append(produto) 
   print('Consumidor: {} → Produtos: {}.'.format(padaria['N'][i], consumo))
 
-# Análise por linha (quais produtos cada i consumiu)
-# Análise por coluna (quantos is consumiram determinado produto)
+# Análise por linha (quais produtos cada cliente consumiu)
+# Análise por coluna (quantos clientes consumiram determinado produto)
+# Frequência de compra de cada ítem: Análise de coluna(ordem dos clientes que compraram o produto)
+# Produtos que podem ser comprados juntos: Análise de frequência de combinação entre produtos
+# Produtos que SEMPRE são comprados juntos: Análise de frequência de combinação entre produtos (produtos com 100% de combinações entre si)
+# Produtos que NUNCA são comprados juntos: Análise de frequência de combinação entre produtos (produtos com 0% combinações entre si)
