@@ -1,16 +1,25 @@
 import pandas as pd
 import xlrd
 
-df = pd.read_excel('pao-pra-ja.xlsx') 
-print(df)
+padaria = pd.read_excel('pao-pra-ja.xlsx') 
+print(padaria)
 
 produtos = ['Leite', 'Café',  'Pão', 'Mortadela', 'Suco', 'Manteiga']
+venda = ['']
+cliente = []
 
 print('\n')
-for i in df.index:
+for i in padaria.index:
+  consumo = ['']
   for produto in produtos:
-    if df[produto][i] == 'sim':
-      print('Clientes que compraram {}: {} '.format(produto, df['N'][i]))
+      if padaria[produto][i] == 'sim':
+        consumo.append([[padaria['N'][i]], [produto]]) 
+        print('Nº do consumidor de {}:  {}'.format(produto, padaria['N'][i]))
+        print(consumo)
 
-# Análise por linha (quais produtos cada cliente consumiu)
-# Análise por coluna (quantos clientes consumiram determinado produto)
+print('Produtos consumidos: {}'.format(produto))
+
+    
+
+# Análise por linha (quais produtos cada i consumiu)
+# Análise por coluna (quantos is consumiram determinado produto)
