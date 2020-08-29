@@ -27,6 +27,7 @@ paciente = data.to_dict(orient='records')
 id_nenhuma = []
 id_rigida = []
 id_gelatinosa = []
+
 id_astigmatismo = []
 id_producao_lacrimal = []
 id_diagnostico = []
@@ -66,6 +67,8 @@ for info in range(23):
 
 id_idades = ['Jovem: {}'.format(id_idade_jovem), 'pre-presbiópico: {}'.format(id_idade_prePresbiopico), 'presbiópico: {}'.format(id_idade_presbiópico)]
 
+
+
 print('='*60)
 print('Análise de variáveis por ID')
 print('='*60)
@@ -75,7 +78,7 @@ print(' IDs:\n  Nenhuma lente: ', id_nenhuma)
 print('  Lentes gelatinosas: ', id_gelatinosa)
 print('  Lentes rígidas: ', id_rigida)
 print('\n')
-print('Astigmatismo:\n Total: {}\nIDs: {}'.format(len(id_astigmatismo), id_astigmatismo))
-print('Idade:\n Total:{}\nIDs: {}'.format(len(id_idades), id_idades))
-print('Diagnóstico:\n Total hipermetropes: {}\n Total míopes: {}\nIDs hipermetropes: {}'.format(len(id_diagnostico), 23-len(id_diagnostico), id_diagnostico))
-print('Produção lacrimal:\n Total reduzida: {}\nIDs reduzida: {}\n Total normal: {}'.format(len(id_producao_lacrimal), id_producao_lacrimal, 23-len(id_producao_lacrimal)))
+print('Astigmatismo:\n Total: {}\n IDs: {}\n'.format(len(id_astigmatismo), id_astigmatismo))
+print('Idade:\n Total:{}\n IDs: {}\n'.format(len(id_idades), id_idades))
+print('Diagnóstico:\n Total hipermetropes: {}\n Total míopes: {}\n IDs hipermetropes: {}\n'.format(len(id_diagnostico), 23-len(id_diagnostico), id_diagnostico))
+print('Produção lacrimal:\n Total reduzida: {}\n IDs reduzida: {}\n Total normal: {}\n'.format(len(id_producao_lacrimal), id_producao_lacrimal, 23-len(id_producao_lacrimal)))
