@@ -69,6 +69,7 @@ id_idades = ['Jovem: {}'.format(id_idade_jovem), 'pre-presbiópico: {}'.format(i
 
 nenhuma_astigmatismo = []
 nenhuma_prodLacReduzida = []
+nenhuma_diagHipermetrope = []
 for nenhumaLente in range(len(id_nenhuma)):
   for astig in range(len(id_astigmatismo)):
     if id_nenhuma[nenhumaLente] == id_astigmatismo[astig]:
@@ -76,10 +77,14 @@ for nenhumaLente in range(len(id_nenhuma)):
   for prodLacrimal in range(len(id_nenhuma)):
     if id_nenhuma[nenhumaLente] == id_producao_lacrimal[prodLacrimal]:
       nenhuma_prodLacReduzida.append(id_producao_lacrimal[prodLacrimal])
+  for diagnost in range(len(id_diagnostico)):
+    if id_nenhuma[nenhumaLente] == id_diagnostico[diagnost]:
+      nenhuma_diagHipermetrope.append(id_diagnostico[diagnost])
+
 
 print('Nenhuma lente + astigmatismo: {}'.format(nenhuma_astigmatismo))
 print('Nenhuma lente + produção lacrimal reduzida: {}'.format(nenhuma_prodLacReduzida))
-
+print('Nenhuma lente + hipermetropia: {}'.format(nenhuma_diagHipermetrope))
 
 print('='*60)
 print('Análise de variáveis por ID')
