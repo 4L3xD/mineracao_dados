@@ -122,6 +122,33 @@ for lenteRigida in range(len(id_rigida)):
     if id_rigida[lenteRigida] == id_idade_presbiópico[presbiópico]:
       rigida_presbiópico.append(id_idade_presbiópico[presbiópico])
 
+gelatinosa_astigmatismo = []
+gelatinosa_prodLacReduzida = []
+gelatinosa_diagHipermetrope = []
+gelatinosa_jovem = []
+gelatinosa_prePresbiopico = []
+gelatinosa_presbiópico = []
+
+for lenteGelatinosa in range(len(id_gelatinosa)):
+  for astig in range(len(id_astigmatismo)):
+    if id_gelatinosa[lenteGelatinosa] == id_astigmatismo[astig]:
+      gelatinosa_astigmatismo.append(id_astigmatismo[astig])
+  for prodLacrimal in range(len(id_gelatinosa)):
+    if id_gelatinosa[lenteGelatinosa] == id_producao_lacrimal[prodLacrimal]:
+      gelatinosa_prodLacReduzida.append(id_producao_lacrimal[prodLacrimal])
+  for diagnost in range(len(id_diagnostico)):
+    if id_gelatinosa[lenteGelatinosa] == id_diagnostico[diagnost]:
+      gelatinosa_diagHipermetrope.append(id_diagnostico[diagnost])
+  for jovem in range(len(id_idade_jovem)):
+    if id_gelatinosa[lenteGelatinosa] == id_idade_jovem[jovem]:
+      gelatinosa_jovem.append(id_idade_jovem[jovem])
+  for prePresbiopico in range(len(id_idade_prePresbiopico)):
+    if id_gelatinosa[lenteGelatinosa] == id_idade_prePresbiopico[prePresbiopico]:
+      gelatinosa_prePresbiopico.append(id_idade_prePresbiopico[prePresbiopico])
+  for presbiópico in range(len(id_idade_presbiópico)):
+    if id_gelatinosa[lenteGelatinosa] == id_idade_presbiópico[presbiópico]:
+      gelatinosa_presbiópico.append(id_idade_presbiópico[presbiópico])
+
 print('='*60)
 print('Análise de variáveis por ID')
 print('='*60)
@@ -156,12 +183,12 @@ print('Lente rígida em jovens: {}'.format(rigida_jovem))
 print('Lente rígida em prePresbiopico: {}'.format(rigida_prePresbiopico))
 print('Lente rígida em presbiopico: {}'.format(rigida_presbiópico))
 
-#print('='*60)
-#print('Lente: NENHUMA:')
-#print('='*60)
-#print('Nenhuma lente + astigmatismo: {}'.format#(nenhuma_astigmatismo))
-#print('Nenhuma lente + produção lacrimal reduzida: {}#'.format(nenhuma_prodLacReduzida))
-#print('Nenhuma lente + hipermetropia: {}'.format#(nenhuma_diagHipermetrope))
-#print('Nenhuma lente em jovens: {}'.format#(nenhuma_jovem))
-#print('Nenhuma lente em prePresbiopico: {}'.format#(nenhuma_prePresbiopico))
-#print('Nenhuma lente em presbiopico: {}'.format#(nenhuma_presbiópico))
+print('='*60)
+print('Lente: GELATINOSA:')
+print('='*60)
+print('Lente gelatinosa + astigmatismo: {}'.format(gelatinosa_astigmatismo))
+print('Lente gelatinosa + produção lacrimal reduzida: {}'.format(gelatinosa_prodLacReduzida))
+print('Lente gelatinosa + hipermetropia: {}'.format(gelatinosa_diagHipermetrope))
+print('Lente gelatinosa em jovens: {}'.format(gelatinosa_jovem))
+print('Lente gelatinosa em prePresbiopico: {}'.format(gelatinosa_prePresbiopico))
+print('Lente gelatinosa em presbiopico: {}'.format(gelatinosa_presbiópico))
