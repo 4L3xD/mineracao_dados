@@ -149,6 +149,72 @@ for lenteGelatinosa in range(len(id_gelatinosa)):
     if id_gelatinosa[lenteGelatinosa] == id_idade_presbiópico[presbiópico]:
       gelatinosa_presbiópico.append(id_idade_presbiópico[presbiópico])
 
+pre_hiper = []
+presbiopico_hiper = []
+jovem_hiper = []
+
+for i in range(len(id_diagnostico)):
+  for y in range(len(id_idade_prePresbiopico)):
+    if id_diagnostico[i] == id_idade_prePresbiopico[y]:
+      pre_hiper.append(id_idade_prePresbiopico[y])
+  for y in range(len(id_idade_presbiópico)):
+    if id_diagnostico[i] == id_idade_presbiópico[y]:
+      presbiopico_hiper.append(id_idade_presbiópico[y])
+  for y in range(len(id_idade_jovem)):
+    if id_diagnostico[i] == id_idade_jovem[y]:
+      jovem_hiper.append(id_idade_jovem[y])
+
+pre_astig = []
+presbiopico_astig = []
+jovem_astig = []
+
+for i in range(len(id_astigmatismo)):
+  for y in range(len(id_idade_prePresbiopico)):
+    if id_astigmatismo[i] == id_idade_prePresbiopico[y]:
+      pre_astig.append(id_idade_prePresbiopico[y])
+  for y in range(len(id_idade_presbiópico)):
+    if id_astigmatismo[i] == id_idade_presbiópico[y]:
+      presbiopico_astig.append(id_idade_presbiópico[y])
+  for y in range(len(id_idade_jovem)):
+    if id_astigmatismo[i] == id_idade_jovem[y]:
+      jovem_astig.append(id_idade_jovem[y])
+
+pre_prodLacrimal = []
+presbiopico_prodLacrimal = []
+jovem_prodLacrimal = []
+
+for i in range(len(id_producao_lacrimal)):
+  for y in range(len(id_idade_prePresbiopico)):
+    if id_producao_lacrimal[i] == id_idade_prePresbiopico[y]:
+      pre_prodLacrimal.append(id_idade_prePresbiopico[y])
+  for y in range(len(id_idade_presbiópico)):
+    if id_producao_lacrimal[i] == id_idade_presbiópico[y]:
+      presbiopico_prodLacrimal.append(id_idade_presbiópico[y])
+  for y in range(len(id_idade_jovem)):
+    if id_producao_lacrimal[i] == id_idade_jovem[y]:
+      jovem_prodLacrimal.append(id_idade_jovem[y])
+
+print('='*60)
+print('Idade x produção lacrimal reduzida')
+print('='*60)      
+print('Jovens com produção lacrimal reduzida: {}'.format(jovem_prodLacrimal))
+print('Pré-presbiopicos com produção lacrimal reduzida: {}'.format(pre_prodLacrimal))
+print('Presbiópicos com astigmatismo: {}'.format(presbiopico_prodLacrimal))
+
+print('='*60)
+print('Idade x astigmatismo')
+print('='*60)      
+print('Jovens com astigmatismo: {}'.format(jovem_astig))
+print('Pré-presbiopicos com astigmatismo: {}'.format(pre_astig))
+print('Presbiópicos com astigmatismo: {}'.format(presbiopico_astig))
+
+print('='*60)
+print('Idade x diagnóstico')
+print('='*60)      
+print('Jovens com hipermetropia: {}'.format(jovem_hiper))
+print('Pré-presbiopicos com hipermetropia: {}'.format(pre_hiper))
+print('Presbiópicos com hipermetropia: {}'.format(presbiopico_hiper))
+
 print('='*60)
 print('Análise de variáveis por ID')
 print('='*60)
