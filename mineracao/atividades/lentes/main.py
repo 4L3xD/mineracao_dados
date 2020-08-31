@@ -70,6 +70,9 @@ id_idades = ['Jovem: {}'.format(id_idade_jovem), 'pre-presbiópico: {}'.format(i
 nenhuma_astigmatismo = []
 nenhuma_prodLacReduzida = []
 nenhuma_diagHipermetrope = []
+nenhuma_jovem = []
+nenhuma_prePresbiopico = []
+nenhuma_presbiópico = []
 for nenhumaLente in range(len(id_nenhuma)):
   for astig in range(len(id_astigmatismo)):
     if id_nenhuma[nenhumaLente] == id_astigmatismo[astig]:
@@ -80,11 +83,23 @@ for nenhumaLente in range(len(id_nenhuma)):
   for diagnost in range(len(id_diagnostico)):
     if id_nenhuma[nenhumaLente] == id_diagnostico[diagnost]:
       nenhuma_diagHipermetrope.append(id_diagnostico[diagnost])
+  for jovem in range(len(id_idade_jovem)):
+    if id_nenhuma[nenhumaLente] == id_idade_jovem[jovem]:
+      nenhuma_jovem.append(id_idade_jovem[jovem])
+  for prePresbiopico in range(len(id_idade_prePresbiopico)):
+    if id_nenhuma[nenhumaLente] == id_idade_prePresbiopico[prePresbiopico]:
+      nenhuma_prePresbiopico.append(id_idade_prePresbiopico[prePresbiopico])
+  for presbiópico in range(len(id_idade_presbiópico)):
+    if id_nenhuma[nenhumaLente] == id_idade_presbiópico[presbiópico]:
+      nenhuma_presbiópico.append(id_idade_presbiópico[presbiópico])
 
 
 print('Nenhuma lente + astigmatismo: {}'.format(nenhuma_astigmatismo))
 print('Nenhuma lente + produção lacrimal reduzida: {}'.format(nenhuma_prodLacReduzida))
 print('Nenhuma lente + hipermetropia: {}'.format(nenhuma_diagHipermetrope))
+print('Nenhuma lente em jovens: {}'.format(nenhuma_jovem))
+print('Nenhuma lente em prePresbiopico: {}'.format(nenhuma_prePresbiopico))
+print('Nenhuma lente em presbiopico: {}'.format(nenhuma_presbiópico))
 
 print('='*60)
 print('Análise de variáveis por ID')
