@@ -67,6 +67,18 @@ for info in range(23):
 
 id_idades = ['Jovem: {}'.format(id_idade_jovem), 'pre-presbiópico: {}'.format(id_idade_prePresbiopico), 'presbiópico: {}'.format(id_idade_presbiópico)]
 
+nenhuma_astigmatismo = []
+nenhuma_prodLacReduzida = []
+for nenhumaLente in range(len(id_nenhuma)):
+  for astig in range(len(id_astigmatismo)):
+    if id_nenhuma[nenhumaLente] == id_astigmatismo[astig]:
+      nenhuma_astigmatismo.append(id_astigmatismo[astig])
+  for prodLacrimal in range(len(id_nenhuma)):
+    if id_nenhuma[nenhumaLente] == id_producao_lacrimal[prodLacrimal]:
+      nenhuma_prodLacReduzida.append(id_producao_lacrimal[prodLacrimal])
+
+print('Nenhuma lente + astigmatismo: {}'.format(nenhuma_astigmatismo))
+print('Nenhuma lente + produção lacrimal reduzida: {}'.format(nenhuma_prodLacReduzida))
 
 
 print('='*60)
